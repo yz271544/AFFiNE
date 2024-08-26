@@ -186,7 +186,7 @@ impl SqliteConnection {
           .count
       }
     };
-    Ok(count)
+    Ok(count as i32)
   }
 
   #[napi]
@@ -401,7 +401,7 @@ impl SqliteConnection {
       .await
       .map_err(anyhow::Error::from)?
       .max_version;
-    Ok(version)
+    Ok(version as i32)
   }
 
   #[napi]
