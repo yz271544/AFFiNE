@@ -33,7 +33,7 @@ declare module '../../fundamentals/config' {
 defineStartupConfig('server', {
   externalUrl: '',
   https: false,
-  host: 'localhost',
+  host: '0.0.0.0',
   port: 3010,
   path: '',
 });
